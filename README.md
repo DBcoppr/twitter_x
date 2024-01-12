@@ -1,8 +1,12 @@
-## Objective
-
 Here is the deployed link https://twitter-3cixl5zk2-dbcoppr.vercel.app/
+## Objective
+To create minified version of twitter using react and firebase as backend
 
-
+# Features
+1. Login and Signup using email authentication service of firebase
+2. User can tweet/post their message
+3. User can follow other users
+4. Finally user can view its profile details containing its followers, follwings users and feeds.
 
 ## Available Scripts
 
