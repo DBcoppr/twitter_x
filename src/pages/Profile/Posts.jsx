@@ -9,6 +9,7 @@ import {
 import React, { useEffect, useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import { db } from "../../firebase";
+import { timeAgo } from "../../utils/timeDate";
 const Posts = () => {
   const [userDetail, setUserDetail] = useOutletContext();
   const [postData, setPostData] = useState([]);
@@ -49,7 +50,6 @@ const Posts = () => {
   }, []);
 
   if (isLoading) {
-    // Loading state
     return (
       <>
         <div class="rounded-md p-4 max-w-md w-full mx-auto my-4">
@@ -100,7 +100,9 @@ const Posts = () => {
                 <p className="text-[1.2rem] font-medium text-slate-700">
                   {userDetail.username}
                 </p>
-                <p className="text-[0.7rem] text-slate-500">10 mins ago</p>
+                <p className="text-[0.7rem] text-slate-500">
+                  {timeAgo(item.date)}
+                </p>
               </div>
               <p className="text-[0.8rem] pl-4 pr-8 text-slate-500">
                 {post.text}

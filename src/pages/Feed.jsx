@@ -14,6 +14,7 @@ import React, { useEffect, useState } from "react";
 import Button from "../components/Button";
 import { useUserContext } from "../context/userContext";
 import { db } from "../firebase";
+import { timeAgo } from "../utils/timeDate";
 
 const Feed = () => {
   const [isWrite, setIsWrite] = useState(false);
@@ -119,10 +120,7 @@ const Feed = () => {
       </div>
     );
   }
-  function timeAgo(timestamp) {
-    const targetDate = timestamp.toDate();
-    return formatDistanceToNow(targetDate, { addSuffix: true });
-  }
+
   return (
     <>
       <div className="user-feed-page w-[40%] m-auto pt-[6rem]">
