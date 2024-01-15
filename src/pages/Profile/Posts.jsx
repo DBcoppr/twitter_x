@@ -101,7 +101,7 @@ const Posts = () => {
                   {userDetail.username}
                 </p>
                 <p className="text-[0.7rem] text-slate-500">
-                  {timeAgo(item.date)}
+                  {timeAgo(post.date)}
                 </p>
               </div>
               <p className="text-[0.8rem] pl-4 pr-8 text-slate-500">
